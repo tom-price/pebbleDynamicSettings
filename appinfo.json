@@ -48,8 +48,12 @@
             }
         ]
     },
-    "sdkVersion": "2",
+    "sdkVersion": "3",
     "shortName": "KickTracker",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
     "uuid": "68340ef0-cea5-4b55-b31e-f32c27a4e1e4",
     "versionCode": 1,
     "versionLabel": "1.3",
