@@ -1,0 +1,59 @@
+{
+    "appKeys": {
+        "KEY_BACKERS": 1,
+        "KEY_PLEDGED": 0,
+        "STYLE_1": 3,
+        "STYLE_2": 4,
+        "STYLE_3": 5
+    },
+    "capabilities": [
+        "configurable"
+    ],
+    "companyName": "tom@tomprice.ca",
+    "longName": "Kickstarter Tracker",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "fonts/RNS-B.ttf",
+                "name": "FONT_RNS_30",
+                "type": "font"
+            },
+            {
+                "characterRegex": "[0-9:.]",
+                "file": "fonts/RNS-B.ttf",
+                "name": "FONT_RNS_SUBSET_48",
+                "type": "font"
+            },
+            {
+                "file": "fonts/RNS-B.ttf",
+                "name": "FONT_RNS_25",
+                "type": "font"
+            },
+            {
+                "file": "fonts/HWT Artz.ttf",
+                "name": "FONT_HWT_25",
+                "type": "font"
+            },
+            {
+                "characterRegex": "[0-9:,]",
+                "file": "fonts/HWT Artz.ttf",
+                "name": "FONT_HWT_SUBSET_50",
+                "type": "font"
+            },
+            {
+                "file": "fonts/HWT Artz.ttf",
+                "name": "FONT_HWT_30",
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "2",
+    "shortName": "KickTracker",
+    "uuid": "68340ef0-cea5-4b55-b31e-f32c27a4e1e4",
+    "versionCode": 1,
+    "versionLabel": "1.3",
+    "watchapp": {
+        "watchface": true
+    }
+}
