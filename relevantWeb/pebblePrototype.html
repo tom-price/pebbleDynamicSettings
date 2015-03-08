@@ -1,0 +1,122 @@
+	{% extends "base.html" %}
+	{% block title %}Pebble - Tom Price{% endblock %}
+	{% block additionalStyling %}
+	<style>
+	.matchingBtn:hover, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-nav>li>a:hover {
+		background-color: {{ primaryLight }}; /*Light Tan*/
+	}
+	.form-control, .modal-content {
+		color: {{ secondaryAccent }}; /*Light Accent*/
+	}
+	.mainMasthead {
+		background-color: {{ primaryAccent }}; /*Dark Accent*/
+	}
+	.about {
+		color: {{ secondaryAccent }}; /*Light Accent*/
+	}
+	.mainMasthead p {
+		text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+	}
+	.sectionHeadder, .tidbit {
+		background-color: {{ secondaryAccent }}; /*Light Accent*/
+	}
+	.sectionHeadder:after {
+		border-top: solid 20px {{ secondaryAccent }}; /*Light Accent*/
+	}
+	.about, body {
+		background-color: {{ primaryLight }}; /*Light Tan*/
+	}
+
+	.mainMasthead, .mainMasthead p, #footer a {
+		color: ; /*Dark Tan*/
+	}
+	.sectionHeadder, .tidbit {
+		color: {{ primaryLight }}; /*Light Tan*/
+	}
+
+	.about a, .about a:visited {
+		border-bottom: 2px solid #bcd1e6;
+		color: {{ secondaryAccent }}; /*Light Accent*/
+	}
+
+	.about a:hover, .about a:active {
+		color: {{ secondaryLight }}; /*Light Accent*/
+		border-bottom: 2px solid {{ secondaryAccent }}; /*Light Accent*/
+	}
+
+	@font-face {
+		font-family: 'barutablack';
+		src: url('/static/fonts/RNS-B-webfont.eot');
+		src: url('/static/fonts/RNS-B-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/static/fonts/RNS-B-webfont.woff2') format('woff2'),
+		url('/static/fonts/RNS-B-webfont.woff') format('woff'),
+		url('/static/fonts/RNS-B-webfont.ttf') format('truetype'),
+		url('/static/fonts/RNS-B-webfont.svg#barutablack') format('svg');
+		font-weight: normal;
+		font-style: normal;
+
+	}
+	.rns { font-family: 'barutablack', Arial, sans-serif; }
+
+	</style>
+	<link href="/static/css/bootstrap-switch.css" rel="stylesheet">
+	<link href="/static/css/main.css" rel="stylesheet">
+	<link href="/static/css/pebble.css" rel="stylesheet">
+	{% endblock %}
+	{% block body %}
+
+	<div class="sectionHeadder">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="text-uppercase text-center h1">Settings</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="about" style="padding-top: 30px">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="form-body">
+						<div class="form-group" id="formSelector">
+							
+							<!-- This is all now dynamically added -->
+							
+							<!-- <h4><strong>Watchface Font:</strong></h4>
+							<div class="row" style="padding-bottom: 10px">
+								<div class="col-xs-6 rns"><h4 class="noMargin">RNS Baruta Black</h4></div>
+								<div class="col-xs-6">
+									<input type="radio" data-on-color="primary" name="radio-choice" id="fontRNS">
+								</div>
+							</div>
+							<div class="row" style="padding-bottom: 10px">
+								<div class="col-xs-6 tk-hwt-artz"><h4 class="noMargin">HWT Artz</h4></div>
+								<div class="col-xs-6">
+									<input type="radio" data-on-color="primary" name="radio-choice" id="fontHWT">
+								</div>
+							</div>      
+							<div class="websiteURL">                  
+								<label for="project">URL of Project Page:</label>
+								<input type="url" name="url" id="project" class="form-control"  placeholder="Enter full URL"/>
+							</div> -->
+						</div>
+					</div>
+					<div class="col-xs-8 col-xs-offset-2 submission">
+						<button type="submit" class="btn btn-lg btn-block matchingBtn spacer" id="b-cancel">Cancel</button>
+						<button type="submit" class="btn btn-lg btn-block matchingBtn spacer" id="b-submit">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	{% endblock %}
+	{% block additionalScripts %}
+	<script src="/static/js/highlight.js" defer></script>
+	<script src="/static/js/bootstrap-switch.js" defer></script>
+	<script src="/static/js/pebblePrototype.js" defer></script>
+	<script src="/static/js/switch.js" defer></script>
+	{% endblock %}
