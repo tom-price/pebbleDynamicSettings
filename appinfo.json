@@ -1,63 +1,24 @@
 {
     "appKeys": {
-        "KEY_BACKERS": 1,
-        "KEY_PLEDGED": 0,
-        "STYLE_1": 3,
-        "STYLE_2": 4,
-        "STYLE_3": 5
+        "SETTING_1": 1,
+        "SETTING_2": 2,
+        "SETTING_3": 3
     },
     "capabilities": [
         "configurable"
     ],
     "companyName": "tom@tomprice.ca",
-    "longName": "Kickstarter Tracker",
+    "longName": "Pebble Dynamic",
     "projectType": "native",
     "resources": {
-        "media": [
-            {
-                "file": "fonts/RNS-B.ttf",
-                "name": "FONT_RNS_30",
-                "type": "font"
-            },
-            {
-                "characterRegex": "[0-9:.]",
-                "file": "fonts/RNS-B.ttf",
-                "name": "FONT_RNS_SUBSET_48",
-                "type": "font"
-            },
-            {
-                "file": "fonts/RNS-B.ttf",
-                "name": "FONT_RNS_25",
-                "type": "font"
-            },
-            {
-                "file": "fonts/HWT Artz.ttf",
-                "name": "FONT_HWT_25",
-                "type": "font"
-            },
-            {
-                "characterRegex": "[0-9:,]",
-                "file": "fonts/HWT Artz.ttf",
-                "name": "FONT_HWT_SUBSET_50",
-                "type": "font"
-            },
-            {
-                "file": "fonts/HWT Artz.ttf",
-                "name": "FONT_HWT_30",
-                "type": "font"
-            }
-        ]
+        "media": []
     },
-    "sdkVersion": "3",
-    "shortName": "KickTracker",
-    "targetPlatforms": [
-        "aplite",
-        "basalt"
-    ],
-    "uuid": "68340ef0-cea5-4b55-b31e-f32c27a4e1e4",
+    "sdkVersion": "2",
+    "shortName": "Pebble Dynamic",
+    "uuid": "21db9fa5-71fe-4e8c-b227-1542329ffe0f",
     "versionCode": 1,
-    "versionLabel": "1.3",
+    "versionLabel": "1.0",
     "watchapp": {
-        "watchface": true
+        "watchface": false
     }
 }
