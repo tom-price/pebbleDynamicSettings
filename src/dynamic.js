@@ -3,6 +3,7 @@ var example = { "form": [
     {"type":"heading", "class":"heading","value":"The First Heading"},
     {"type":"description", "class":"paragraphDescription","value":"This is a paragraph describing what the settings do"},
     {"type":"select", "id":"selects","label":"Selects:","elements":[{"option":"Option One"},{"option":"Option Two"}],"value":"Option Two"},
+    {"type":"radio", "id":"radiogroup2","label":"Radio Group","elements":[{"id":"option12","option":"Radio One"},{"id":"option22","option":"Radio Two"}],"value":"Radio Two"},
     {"type":"input", "id":"input1","label":"Text Input","formType":"text","value":"Thomas Price"},
     {"type":"input", "id":"input2","label":"Email Input","formType":"email","value":"tom@tomprice.ca"},
     {"type":"input", "id":"input4","label":"Number Input","formType":"number","value":"1"},
@@ -10,8 +11,8 @@ var example = { "form": [
     {"type":"checkbox", "id":"checkbox1","label":"Checkbox Input","value":true}]
 }
 
-var configuration = localStorage.getItem('configValueV0.7') ? 
-    localStorage.getItem('configValueV0.7') : example;
+var configuration = localStorage.getItem('configValueV0.91') ? 
+    localStorage.getItem('configValueV0.91') : JSON.stringify(example);
 
 
 
@@ -26,13 +27,13 @@ var configuration = localStorage.getItem('configValueV0.7') ?
 // };
 
 function sendData() {
-    console.log(configuration.form[6].value);
-    var setting1 = +configuration.form[6].value;
-    var setting2 = +configuration.form[8].value;
+    console.log(JSON.parse(configuration).form[7].value);
+//     var setting1 = +JSON.parse(configuration).form[7].value;
+//     var setting2 = +JSON.parse(configuration).form[8].value;
     // Assemble dictionary using our keys
     var dictionary = {
-        "SETTING_1": setting1,
-        "SETTING_2": setting2,
+        "SETTING_1": 0,
+        "SETTING_2": 0,
         "SETTING_3": 0
     };
 
@@ -67,8 +68,9 @@ Pebble.addEventListener('appmessage',
                        );
 
 Pebble.addEventListener('showConfiguration', function(e) {
-    console.log('Input Config: ' + JSON.stringify(configuration));
-    Pebble.openURL('http://tomprice.ca/dynamicSettings?' + encodeURIComponent(JSON.stringify(configuration)));
+    console.log('Input Config: ' + configuration);
+    console.log('http://tomprice.ca/dynamicSettings?' + encodeURIComponent(configuration));
+    Pebble.openURL('http://tomprice.ca/dynamicSettings?' + encodeURIComponent(configuration));
 });
 
 Pebble.addEventListener('webviewclosed', function(e) {
@@ -76,8 +78,8 @@ Pebble.addEventListener('webviewclosed', function(e) {
         console.log("Empty response");
     } else {
         console.log('Outpt Config: ' + e.response);
-        configuration = JSON.parse(decodeURIComponent(e.response));
-        localStorage.setItem('configValueV0.7', configuration);
+        configuration = decodeURIComponent(e.response);
+        localStorage.setItem('configValueV0.91', configuration);
         sendData();
     }
 });
